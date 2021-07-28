@@ -1,4 +1,6 @@
 class ToursController < ApplicationController
+  before_action :tuor_find, only: [:show, :destroy]
+
   def index
     @tours = Tour.all
   end
@@ -17,13 +19,21 @@ class ToursController < ApplicationController
   end
 
   def show
-    @tour = Tour.find(params[:id])
+  end
+
+  def destroy
+    @tour.destroy
+    redirect_to root_path
   end
 
   private
 
   def tour_params
     params.require(:tour).permit(:place)
+  end
+
+  def tuor_find
+    @tour = Tour.find(params[:id])
   end
 
 end

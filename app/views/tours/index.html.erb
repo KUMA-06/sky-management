@@ -18,9 +18,14 @@
 </div>
 
 <div>
-  <% @tours.each do |tour| %>
-  <div class="content_post">
-    <%= link_to tour.place, tour_path(tour) %>
+  <div>
+    <% @tours.each do |tour| %>
+    <div class="tour-list">
+      <%= link_to tour.place, tour_path(tour) %>
+    </div>
+    <div class='del-tour'>
+      <%= link_to "ツアー削除", tour_path(tour.id), method: :delete%>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
