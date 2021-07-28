@@ -17,44 +17,10 @@
   </div>
 </div>
 
-<div style="margin:0px;padding:0px;" align="center">
-  <table width="98%" style="border-collapse: collapse;border:1px solid #000000;text-align:left;">
-    <tbody>
-      <tr>
-        <th style="border:1px solid #000000;text-align:center;">&nbsp;</th>
-        <th style="border:1px solid #000000;text-align:center;">食堂移動済み</th>
-        <th style="border:1px solid #000000;text-align:center;">夕食待機</th>
-        <th style="border:1px solid #000000;text-align:center;">夕食準備</th>
-        <th style="border:1px solid #000000;text-align:center;">入浴中</th>
-        <th style="border:1px solid #000000;text-align:center;">お風呂待機</th>
-        <th style="border:1px solid #000000;text-align:center;">エスケープ</th>
-      </tr>
-      <tr>
-        <td style="border:1px solid #000000;text-align:left;">１班<br>１くま１</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #000000;text-align:left;">2班<br>２くま2</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<div class='back'>
-  戻る
-</div>
-
-<div class='reset'>
-  リセット
+<div>
+  <% @tours.each do |tour| %>
+  <div class="content_post">
+    <%= link_to tour.place, tour_path(tour) %>
+  </div>
+  <% end %>
 </div>

@@ -1,5 +1,6 @@
 class ToursController < ApplicationController
   def index
+    @tours = Tour.all
   end
 
   def new
@@ -13,6 +14,10 @@ class ToursController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @tour = Tour.find(params[:id])
   end
 
   private
