@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+}
+
+.header{
+  border: solid 1px blue;
+}
+
+.tour-name{
+  width: 60%;
+  margin: 0 auto;
+  border: solid 1px blue;
+}
+
+.login{
+  border: solid 1px blue;
+}
+
+.add-tour{
+  border: solid 1px blue;
+}
+
+.del-tour{
+  border: solid 1px blue;
+}
