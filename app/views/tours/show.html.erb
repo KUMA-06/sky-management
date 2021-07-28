@@ -12,7 +12,7 @@
     </div>
 
     <div class='del-tour'>
-      ツアー削除
+      <%= link_to "ツアー削除", tour_path(@tour.id), method: :delete%>
     </div>
   </div>
 </div>
