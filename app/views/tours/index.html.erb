@@ -3,8 +3,14 @@
     <%= link_to "トップページ", root_path%>
   </div>
 
-  <div class='login'>
-    管理者ログイン
+  <div class='log'>
+    <% if user_signed_in? %>
+    <%= current_user.name %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+    <% else %>
+    <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+    <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+    <% end %>
   </div>
   <div class='add-tour'>
     <%= link_to "ツアー追加", new_tour_path%>

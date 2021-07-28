@@ -1,4 +1,5 @@
 class ToursController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :tuor_find, only: [:show, :destroy]
 
   def index
@@ -29,7 +30,7 @@ class ToursController < ApplicationController
   private
 
   def tour_params
-    params.require(:tour).permit(:place)
+    params.require(:tour).permit(:place).merge(user_id: current_user.id)
   end
 
   def tuor_find
