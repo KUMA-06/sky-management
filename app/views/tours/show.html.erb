@@ -55,6 +55,10 @@
   </table>
 </div>
 
+<div class="members">
+  <%= render partial: 'member', collection: @members %>
+</div>
+
 <div>
   <%= link_to "班追加", new_tour_member_path(@tour) %>
 </div>

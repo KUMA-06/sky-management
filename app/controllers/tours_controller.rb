@@ -20,6 +20,7 @@ class ToursController < ApplicationController
   end
 
   def show
+    @members = @tour.members.includes(:tour)
   end
 
   def destroy

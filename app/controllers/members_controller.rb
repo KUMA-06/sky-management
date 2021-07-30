@@ -7,7 +7,7 @@ class MembersController < ApplicationController
   end
 
   def create
-    @member = Member.create(member_params)
+    @member = @tour.members.new(member_params)
     if @member.save
       redirect_to tour_path(@tour)
     else
