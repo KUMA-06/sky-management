@@ -8,7 +8,7 @@
   </div>
 
   <div class='login'>
-    管理者ログイン
+    <%= link_to '管理者ログイン', new_user_session_path, class: "login" %>
   </div>
   <div class='add-del'>
     <div class='add-tour'>
@@ -33,30 +33,9 @@
         <th style="border:1px solid #000000;text-align:center;">お風呂待機</th>
         <th style="border:1px solid #000000;text-align:center;">エスケープ</th>
       </tr>
-      <tr>
-        <td style="border:1px solid #000000;text-align:left;">１班<br>１くま１</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-      </tr>
-      <tr>
-        <td style="border:1px solid #000000;text-align:left;">2班<br>２くま2</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-        <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-      </tr>
+      <%= render partial: 'member', collection: @members %>
     </tbody>
   </table>
-</div>
-
-<div class="members">
-  <%= render partial: 'member', collection: @members %>
 </div>
 
 <div>
