@@ -15,6 +15,12 @@ class MembersController < ApplicationController
     end
   end
 
+  def destroy
+    @member = Member.find(params[:id])
+    @member.destroy
+    redirect_to tour_path(@tour)
+  end
+
     private
 
   def member_params

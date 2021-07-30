@@ -6,6 +6,9 @@
     <div>
       <%= member.nickname%>
     </div>
+    <div>
+      <%= link_to "班削除", tour_member_path(@tour,member), method: :delete %>
+    </div>
   </td>
   <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
   <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
