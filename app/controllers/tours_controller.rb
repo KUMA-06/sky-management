@@ -4,6 +4,7 @@ class ToursController < ApplicationController
 
   def index
     @tours = Tour.all
+    dinner = []
   end
 
   def new
