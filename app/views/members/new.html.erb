@@ -1,0 +1,5 @@
+<%= form_with(model: [@tour,@member], local: true) do |f| %>
+<%= f.text_field :group, placeholder: "班" %>
+<%= f.text_field :nickname, placeholder: "アドベンチャーネーム" %>
+<%= f.submit "決定" %>
+<% end %>

@@ -2,7 +2,7 @@
   <div>
     <%= link_to "トップページ", root_path%>
   </div>
-  
+
   <div class='tour-name'>
     <%= @tour.place %>
   </div>
@@ -53,6 +53,10 @@
       </tr>
     </tbody>
   </table>
+</div>
+
+<div>
+  <%= link_to "班追加", new_tour_member_path(@tour) %>
 </div>
 
 <div class='back'>
