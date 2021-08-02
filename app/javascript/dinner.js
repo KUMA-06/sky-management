@@ -1,12 +1,16 @@
 function dinner() {
-  let dinnerArray = ['あ', 'い', 'う'];
-  const dinner = document.getElementById('dinner');
-  dinner.addEventListener("click", () => {
-    dinnerArray.push('え');
-    console.log(dinnerArray.length);
-    const dinnerCount = document.getElementById('dinner-count');
-    dinnerCount.innerHTML = (dinnerArray.length);
-  });
+  let dinnerArray = [];
+  const dinner = document.getElementsByClassName('dinner');
+  const dinnerCount = document.getElementsByClassName('dinner-count');
+  for (var i = 0; i < dinner.length; i++){
+    dinner[i].addEventListener("click", () => {
+      dinnerArray.push('あ');
+      console.log(dinnerArray.length);
+      for (var i = 0; i < dinnerCount.length; i++) {
+        dinnerCount[i].innerHTML = (dinnerArray.length);
+      };
+    });
+  };
 };
 
 window.addEventListener('turbolinks:load', dinner);
