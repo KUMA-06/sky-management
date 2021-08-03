@@ -50,14 +50,11 @@
   リセット
 </div>
 
-<script>
-  const dinner = document.getElementsByClassName('dinner');
-  for (var i = 0; i < dinner.length; i++) {
-    dinner[i].addEventListener("click", () => {
-      console.log("いいい")
-    });
-  };
-</script>
+<% require "json" %>
+<% File.open('array.json') do |file| %>
+<% $json_str = JSON.load(file) %>
+<% end %>
+<%= $json_str["dining"][1]]%>
 
 <script>
   var mem = document.getElementsByClassName('mem');
