@@ -26,7 +26,8 @@
     <tbody>
       <tr>
         <th style="border:1px solid #000000;text-align:center;">&nbsp;</th>
-        <th style="border:1px solid #000000;text-align:center;">食堂移動済み</th>
+        <th style="border:1px solid #000000;text-align:center;">食堂移動済み <p id="dining-count">0</p>
+          <input type="button" value="食堂" id="dining"></th>
         <th style="border:1px solid #000000;text-align:center;">夕食待機</th>
         <th style="border:1px solid #000000;text-align:center;">夕食準備</th>
         <th style="border:1px solid #000000;text-align:center;">入浴中</th>
@@ -50,11 +51,16 @@
   リセット
 </div>
 
-<% require "json" %>
-<% File.open('array.json') do |file| %>
-<% $json_str = JSON.load(file) %>
-<% end %>
-<%= $json_str["dining"][1]]%>
+<%= @dining_list%>
+
+<script>
+  const dining = document.getElementById("dining");
+  const diningCount = document.getElementById("dining-count");
+  let diningList = '<%=@dining_list%>';
+  dining.addEventListener("click", () => {
+    diningList.push("あああああ");
+  });
+</script>
 
 <script>
   var mem = document.getElementsByClassName('mem');
