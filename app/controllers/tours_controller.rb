@@ -26,14 +26,8 @@ class ToursController < ApplicationController
     File.open('array.json') do |file|
       @json_data = JSON.load(file)
       gon.data = @json_data
-      
     end
-    # @dining_list = @json_data["dining"]
-    # @d_wait = @json_data["dinner_wait"]
-    # @d_prepare = @json_data["dinner_prepare"]
-    # @bath = @json_data["bathing"]
-    # @b_wait = @json_data["bath_wait"]
-    # @esc = @json_data["escape"]
+
   end
 
   def destroy

@@ -53,16 +53,16 @@
 
 <%= @json_data%>
 
-
 <script>
   function diningAction() {
     const dining = document.getElementById("dining");
     const diningCount = document.getElementById("dining-count");
-    const diningListJson = gon.data["dining"];
-    diningCount.innerHTML = (diningListJson.length);
+    const diningList = gon.data["dining"];
+    diningCount.innerHTML = (diningList.length);
     dining.addEventListener("click", () => {
-      diningListJson.push("あああああ");
-      diningCount.innerHTML = (diningListJson.length);
+      diningList.push("あああああ");
+      diningCount.innerHTML = (diningList.length);
+      console.log(diningList);
     });
   }
   window.addEventListener('turbolinks:load', diningAction);
