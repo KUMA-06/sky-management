@@ -51,20 +51,19 @@
   リセット
 </div>
 
-<%= @dining_list%>
+<%= @json_data%>
+
 
 <script>
-  const dining = document.getElementById("dining");
-  const diningCount = document.getElementById("dining-count");
-  let diningList = '<%=@dining_list%>';
-  dining.addEventListener("click", () => {
-    diningList.push("あああああ");
-  });
-</script>
-
-<script>
-  var mem = document.getElementsByClassName('mem');
-  for (var i = 0; i < mem.length; i++) {
-    console.log(mem[i]);
-  };
+  function diningAction() {
+    const dining = document.getElementById("dining");
+    const diningCount = document.getElementById("dining-count");
+    const diningListJson = gon.data["dining"];
+    diningCount.innerHTML = (diningListJson.length);
+    dining.addEventListener("click", () => {
+      diningListJson.push("あああああ");
+      diningCount.innerHTML = (diningListJson.length);
+    });
+  }
+  window.addEventListener('turbolinks:load', diningAction);
 </script>

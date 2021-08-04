@@ -4,7 +4,7 @@ class ToursController < ApplicationController
 
   def index
     @tours = Tour.all
-    dinner = []
+
   end
 
   def new
@@ -22,12 +22,13 @@ class ToursController < ApplicationController
 
   def show
     @members = @tour.members.includes(:tour)
-    # render 'hoge.js.erb'
-    require "json"
+    require 'json'
     File.open('array.json') do |file|
       @json_data = JSON.load(file)
+      gon.data = @json_data
+      
     end
-    @dining_list = @json_data["dining"]
+    # @dining_list = @json_data["dining"]
     # @d_wait = @json_data["dinner_wait"]
     # @d_prepare = @json_data["dinner_prepare"]
     # @bath = @json_data["bathing"]

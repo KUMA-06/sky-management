@@ -13,4 +13,5 @@ function dinner() {
   };
 };
 
+  
 window.addEventListener('turbolinks:load', dinner);
