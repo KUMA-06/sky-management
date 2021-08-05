@@ -29,7 +29,8 @@ class ToursController < ApplicationController
       @json_data = JSON.load(file)
       gon.data = @json_data
     end
-
+    dining_ary1 = Category.pluck(:dining)
+    @dining_ary2 = dining_ary1.compact
   end
 
   def destroy
