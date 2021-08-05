@@ -22,8 +22,10 @@ class ToursController < ApplicationController
 
   def show
     @members = @tour.members.includes(:tour)
+    @category = Category.new
+    @categories = @tour.categories.includes(:tour)
     require 'json'
-    File.open('array.json') do |file|
+    File.open('public/array.json') do |file|
       @json_data = JSON.load(file)
       gon.data = @json_data
     end

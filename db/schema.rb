@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_30_020908) do
+ActiveRecord::Schema.define(version: 2021_08_05_060229) do
+
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "dining"
+    t.string "dinner_wait"
+    t.string "dinner_preparation"
+    t.string "bath_time"
+    t.string "bath_wait"
+    t.string "escape"
+    t.bigint "tour_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tour_id"], name: "index_categories_on_tour_id"
+  end
 
   create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "group", null: false
@@ -42,6 +55,7 @@ ActiveRecord::Schema.define(version: 2021_07_30_020908) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "tours"
   add_foreign_key "members", "tours"
   add_foreign_key "tours", "users"
 end
