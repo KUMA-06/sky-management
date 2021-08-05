@@ -26,16 +26,8 @@
     <tbody>
       <tr>
         <th style="border:1px solid #000000;text-align:center;">&nbsp;</th>
-        <th style="border:1px solid #000000;text-align:center;">食堂移動済み <p id="dining-count">0</p>
-          <input type="button" value="食堂" id="dining"></th>
-        <th style="border:1px solid #000000;text-align:center;">
-        <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
-          <div class="form-input">
-            <%= f.text_field :dinner_wait, class: 'form-message', placeholder: 'type a メッセージ' %>
-          </div>
-          <%= f.submit '追加', class: 'form-submit' %>
-        <% end %>
-        </th>
+        <th style="border:1px solid #000000;text-align:center;">食堂移動済み</th>
+        <th style="border:1px solid #000000;text-align:center;">夕食待機</th>
         <th style="border:1px solid #000000;text-align:center;">夕食準備</th>
         <th style="border:1px solid #000000;text-align:center;">入浴中</th>
         <th style="border:1px solid #000000;text-align:center;">お風呂待機</th>

@@ -12,12 +12,51 @@
   </td>
   <td style="border:1px solid #000000;text-align:left;">
     <p class="dinner-count">0</p>
-    <input type="button" value="夕食" class="dinner" id = "id<%= member.id%>">
+          <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
+          <div class="form-input">
+            <input name="category[dining]" type="hidden" value=<%= member.id %>>
+          </div>
+          <%= f.submit '追加', class: 'form-submit' %>
+          <% end %>
   </td>
-  <td style="border:1px solid #000000;text-align:left;" class = "mem">id<%= member.id%></td>
-  <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-  <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-  <td style="border:1px solid #000000;text-align:left;">&nbsp;</td>
-  <td style="border:1px solid #000000;text-align:left;">5</td>
+  <td style="border:1px solid #000000;text-align:left;" >
+        <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
+        <div class="form-input">
+          <input name="category[dinner_wait]" type="hidden" value=<%= member.id %>>
+        </div>
+        <%= f.submit '追加', class: 'form-submit' %>
+        <% end %>
+  </td>
+  <td style="border:1px solid #000000;text-align:left;">
+      <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
+      <div class="form-input">
+        <input name="category[dinner_preparation]" type="hidden" value=<%= member.id %>>
+      </div>
+      <%= f.submit '追加', class: 'form-submit' %>
+      <% end %>
+  </td>
+  <td style="border:1px solid #000000;text-align:left;">
+      <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
+      <div class="form-input">
+        <input name="category[bath_time]" type="hidden" value=<%= member.id %>>
+      </div>
+      <%= f.submit '追加', class: 'form-submit' %>
+      <% end %>
+  </td>
+  <td style="border:1px solid #000000;text-align:left;">
+    <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
+    <div class="form-input">
+      <input name="category[bath_wait]" type="hidden" value=<%= member.id %>>
+    </div>
+    <%= f.submit '追加', class: 'form-submit' %>
+    <% end %>
+  </td>
+  <td style="border:1px solid #000000;text-align:left;">
+        <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
+        <div class="form-input">
+          <input name="category[escape]" type="hidden" value=<%= member.id %>>
+        </div>
+        <%= f.submit '追加', class: 'form-submit' %>
+        <% end %>
+  </td>
 </tr>
-
