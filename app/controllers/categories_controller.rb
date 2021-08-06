@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to tour_path(@tour)
     end
+
   end
 
   private

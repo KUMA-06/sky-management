@@ -11,19 +11,26 @@
     </div>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
-    <p class="dinner-count">0</p>
+    <div>
+      <% dining_ary3 = @dining_ary2.index("#{member.id}")%>
+      <% if dining_ary3.present? %>
+      <%= "#{(dining_ary3 + 1)}番" %>
+      <% end %>
+    </div>
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[dining]" type="hidden" value=<%= member.id %>>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
     <% end %>
-    <div>
-    <%=@dining_ary2%>
-    <%# ifで配列内でメンバーIDと一致したものの添え番＋１を表示 %>
-    </div>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
+    <div>
+      <% dinner_wait_ary3 = @dinner_wait_ary2.index("#{member.id}")%>
+      <% if dinner_wait_ary3.present? %>
+      <%= "#{(dinner_wait_ary3 + 1)}番" %>
+      <% end %>
+    </div>
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[dinner_wait]" type="hidden" value=<%= member.id %>>
@@ -32,6 +39,12 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
+    <div>
+      <% dinner_preparation_ary3 = @dinner_preparation_ary2.index("#{member.id}")%>
+      <% if dinner_preparation_ary3.present? %>
+      <%= "#{(dinner_preparation_ary3 + 1)}番" %>
+      <% end %>
+    </div>
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[dinner_preparation]" type="hidden" value=<%= member.id %>>
@@ -40,6 +53,12 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
+    <div>
+      <% bath_time_ary3 = @bath_time_ary2.index("#{member.id}")%>
+      <% if bath_time_ary3.present? %>
+      <%= "#{(bath_time_ary3 + 1)}番" %>
+      <% end %>
+    </div>
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[bath_time]" type="hidden" value=<%= member.id %>>
@@ -48,6 +67,12 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
+    <div>
+      <% bath_wait_ary3 = @bath_wait_ary2.index("#{member.id}")%>
+      <% if bath_wait_ary3.present? %>
+      <%= "#{(bath_wait_ary3 + 1)}番" %>
+      <% end %>
+    </div>
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[bath_wait]" type="hidden" value=<%= member.id %>>
@@ -56,6 +81,12 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
+    <div>
+      <% escape_ary3 = @escape_ary2.index("#{member.id}")%>
+      <% if escape_ary3.present? %>
+      <%= "#{(escape_ary3 + 1)}番" %>
+      <% end %>
+    </div>
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[escape]" type="hidden" value=<%= member.id %>>
