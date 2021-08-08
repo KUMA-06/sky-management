@@ -7,8 +7,11 @@ class CategoriesController < ApplicationController
   # end
 
   def create
-    category = Category.find_by(bath_time: 3)
-    category.destroy
+    category_d1 = Category.where(dining: params[:category][:memberr]).or(Category.where(dinner_wait: params[:category][:memberr])).or(Category.where(dinner_preparation: params[:category][:memberr])).or(Category.where(bath_time: params[:category][:memberr])).or(Category.where(bath_wait: params[:category][:memberr])).or(Category.where(escape: params[:category][:memberr]))
+    if category_d1.present?
+      category_d2 = category_d1[0]
+      category_d2.destroy
+    end
     @category = @tour.categories.new(category_params)
     if @category.save
       redirect_to tour_path(@tour)
@@ -22,6 +25,7 @@ class CategoriesController < ApplicationController
   end
 
   def category_params
+    params.except(:memberr)
     params.require(:category).permit(:dining, :dinner_wait, :dinner_preparation, :bath_time, :bath_wait, :escape)
   end
 

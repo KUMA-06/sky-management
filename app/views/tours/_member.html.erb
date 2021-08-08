@@ -20,6 +20,7 @@
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[dining]" type="hidden" value=<%= member.id %>>
+      <%= f.hidden_field :memberr, value: member.id %>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
     <% end %>
@@ -34,6 +35,7 @@
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[dinner_wait]" type="hidden" value=<%= member.id %>>
+      <%= f.hidden_field :memberr, value: member.id%>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
     <% end %>
@@ -48,6 +50,7 @@
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[dinner_preparation]" type="hidden" value=<%= member.id %>>
+      <%= f.hidden_field :memberr, value: member.id%>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
     <% end %>
@@ -62,6 +65,7 @@
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[bath_time]" type="hidden" value=<%= member.id %>>
+      <%= f.hidden_field :memberr, value:member.id%>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
     <% end %>
@@ -76,6 +80,7 @@
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[bath_wait]" type="hidden" value=<%= member.id %>>
+      <%= f.hidden_field :memberr, value:member.id%>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
     <% end %>
@@ -90,6 +95,7 @@
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
     <div class="form-input">
       <input name="category[escape]" type="hidden" value=<%= member.id %>>
+      <%= f.hidden_field :memberr, value:member.id%>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
     <% end %>
