@@ -7,6 +7,8 @@ class CategoriesController < ApplicationController
   # end
 
   def create
+    category = Category.find_by(bath_time: 3)
+    category.destroy
     @category = @tour.categories.new(category_params)
     if @category.save
       redirect_to tour_path(@tour)
@@ -20,6 +22,7 @@ class CategoriesController < ApplicationController
   end
 
   def category_params
-    params.require(:category).permit(:dining, :dinner_wait, :dinner_preparation, :bath_time, :bath_wait, :escape)  # マージメンバーID?
+    params.require(:category).permit(:dining, :dinner_wait, :dinner_preparation, :bath_time, :bath_wait, :escape)
   end
+
 end
