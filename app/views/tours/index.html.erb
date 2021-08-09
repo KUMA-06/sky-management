@@ -6,9 +6,9 @@
   <div class='log'>
     <% if user_signed_in? %>
     <%= current_user.name %>
-    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "log-out" %>
     <% else %>
-    <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+    <%= link_to 'ログイン', new_user_session_path, class: "log-in" %>
     <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
     <% end %>
   </div>
@@ -17,15 +17,16 @@
   </div>
 </div>
 
+
 <div>
-  <div>
-    <% @tours.each do |tour| %>
-    <div class="tour-list">
+  <% @tours.each do |tour| %>
+  <div class="tour-list">
+    <div class="tour-place">
       <%= link_to tour.place, tour_path(tour) %>
     </div>
     <div class='del-tour'>
       <%= link_to "ツアー削除", tour_path(tour.id), method: :delete%>
     </div>
-    <% end %>
   </div>
+  <% end %>
 </div>

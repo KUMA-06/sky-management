@@ -1,6 +1,11 @@
 .header {
+  align-items: center;
   display: flex;
+  justify-content:space-between;
+  height: 8vh;
+  width: 98vw;
   border: solid 1px blue;
+  margin: 5px auto;
 }
 
 .top-page{
@@ -9,20 +14,24 @@
   border: solid 1px blue;
 }
 
-.tour-name{
-  width: 60%;
-  margin: 0 auto;
-  border: solid 1px blue;
-}
-
 .log{
-  border: solid 1px blue;
+  display: flex;
+}
+.log-in,.lig-out,.sign-up,.add-tour{
+  margin: 0px 5px;
 }
 
-.add-tour{
-  border: solid 1px blue;
+.tour-list{
+  display: flex;
+  margin-top: 15px; 
+}
+
+.tour-place{
+  width: 60%;
+  text-align: center;
+  border:solid 5px lightgreen;
 }
 
 .del-tour{
-  border: solid 1px blue;
+  background-color: tomato;
 }
