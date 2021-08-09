@@ -4,65 +4,33 @@
   </div>
 
   <div class='tour-name'>
-    <p><%= @tour.place %></p>
+    <h3><%= @tour.place %></h3>
   </div>
 
-  <div class='login'>
-    <%= link_to '管理者ログイン', new_user_session_path, class: "login" %>
-  </div>
-  <div class='add-del'>
-    <div class='add-tour'>
-      <%= link_to "ツアー追加", new_tour_path%>
+  <div class="log">
+    <div class='login'>
+      <%= link_to '管理者ログイン', new_user_session_path, class: "login" %>
     </div>
-
     <div class='del-tour'>
       <%= link_to "ツアー削除", tour_path(@tour.id), method: :delete%>
     </div>
   </div>
 </div>
 
-<div style="margin:0px;padding:0px;" align="center">
+<div style="margin-top:10px;padding:0px;" align="center">
   <table width="98%" style="border-collapse: collapse;border:1px solid #000000;text-align:left;">
     <tbody>
       <tr>
-        <th style="border:1px solid #000000;text-align:center;">&nbsp;</th>
-        <th style="border:1px solid #000000;text-align:center;">食堂移動</th>
-        <th style="border:1px solid #000000;text-align:center;">夕食待機</th>
-        <th style="border:1px solid #000000;text-align:center;">夕食準備</th>
-        <th style="border:1px solid #000000;text-align:center;">入浴中</th>
-        <th style="border:1px solid #000000;text-align:center;">風呂待機</th>
-        <th style="border:1px solid #000000;text-align:center;">部屋待機</th>
+        <th width="12%" style="border:1px solid #000000;text-align:center;"></th>
+        <th width="12%" style="border:1px solid #000000;text-align:center;">食堂移動</th>
+        <th width="12%" style="border:1px solid #000000;text-align:center;">夕食待機</th>
+        <th width="12%" style="border:1px solid #000000;text-align:center;">夕食準備</th>
+        <th width="12%" style="border:1px solid #000000;text-align:center;">入浴中</th>
+        <th width="12%" style="border:1px solid #000000;text-align:center;">風呂待機</th>
+        <th width="12%" style="border:1px solid #000000;text-align:center;">部屋待機</th>
       </tr>
       <%= render partial: 'member', collection: @members %>
+      <td class="bold"><%= link_to "班追加", new_tour_member_path(@tour) %></td>
     </tbody>
   </table>
 </div>
-
-<div>
-  <%= link_to "班追加", new_tour_member_path(@tour) %>
-</div>
-
-<div class='back'>
-  戻る
-</div>
-
-<div class='reset'>
-  リセット
-</div>
-
-<%= @json_data%>
-
-<script>
-  function diningAction() {
-    const dining = document.getElementById("dining");
-    const diningCount = document.getElementById("dining-count");
-    const diningList = gon.data["dining"];
-    diningCount.innerHTML = (diningList.length);
-    dining.addEventListener("click", () => {
-      diningList.push("あああああ");
-      diningCount.innerHTML = (diningList.length);
-      console.log(diningList);
-    });
-  }
-  window.addEventListener('turbolinks:load', diningAction);
-</script>

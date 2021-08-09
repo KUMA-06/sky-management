@@ -1,10 +1,6 @@
 class CategoriesController < ApplicationController
-    before_action :tuor_find
-
-  # def index
-    # @status = Status.new
-    # @messages = @room.messages.includes(:user)
-  # end
+  before_action :authenticate_user!
+  before_action :tuor_find
 
   def create
     category_d1 = Category.where(dining: params[:category][:memberr]).or(Category.where(dinner_wait: params[:category][:memberr])).or(Category.where(dinner_preparation: params[:category][:memberr])).or(Category.where(bath_time: params[:category][:memberr])).or(Category.where(bath_wait: params[:category][:memberr])).or(Category.where(escape: params[:category][:memberr]))
