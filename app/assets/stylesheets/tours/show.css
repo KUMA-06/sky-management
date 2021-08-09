@@ -1,0 +1,20 @@
+.header{
+  height: 14vh;
+}
+
+.tour-name{
+  height: 100%;
+  background-color: lightskyblue;
+  text-align: center;
+  text-justify:auto;
+  font-size: 5vmin;
+  letter-spacing: 1em;
+}
+
+.tour-name p{
+  line-height: 100%;
+}
+
+.category-in{
+  background-color: lightgreen;
+}

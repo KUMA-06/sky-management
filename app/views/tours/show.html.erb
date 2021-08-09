@@ -4,7 +4,7 @@
   </div>
 
   <div class='tour-name'>
-    <%= @tour.place %>
+    <p><%= @tour.place %></p>
   </div>
 
   <div class='login'>
@@ -26,12 +26,12 @@
     <tbody>
       <tr>
         <th style="border:1px solid #000000;text-align:center;">&nbsp;</th>
-        <th style="border:1px solid #000000;text-align:center;">食堂移動済み</th>
+        <th style="border:1px solid #000000;text-align:center;">食堂移動</th>
         <th style="border:1px solid #000000;text-align:center;">夕食待機</th>
         <th style="border:1px solid #000000;text-align:center;">夕食準備</th>
         <th style="border:1px solid #000000;text-align:center;">入浴中</th>
-        <th style="border:1px solid #000000;text-align:center;">お風呂待機</th>
-        <th style="border:1px solid #000000;text-align:center;">エスケープ</th>
+        <th style="border:1px solid #000000;text-align:center;">風呂待機</th>
+        <th style="border:1px solid #000000;text-align:center;">部屋待機</th>
       </tr>
       <%= render partial: 'member', collection: @members %>
     </tbody>

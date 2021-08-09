@@ -11,7 +11,7 @@
     </div>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
-    <div>
+    <div class="category-in">
       <% dining_ary3 = @dining_ary2.index("#{member.id}")%>
       <% if dining_ary3.present? %>
       <%= "#{(dining_ary3 + 1)}番" %>
@@ -26,7 +26,7 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
-    <div>
+    <div class="category-in">
       <% dinner_wait_ary3 = @dinner_wait_ary2.index("#{member.id}")%>
       <% if dinner_wait_ary3.present? %>
       <%= "#{(dinner_wait_ary3 + 1)}番" %>
@@ -41,7 +41,7 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
-    <div>
+    <div class="category-in">
       <% dinner_preparation_ary3 = @dinner_preparation_ary2.index("#{member.id}")%>
       <% if dinner_preparation_ary3.present? %>
       <%= "#{(dinner_preparation_ary3 + 1)}番" %>
@@ -56,7 +56,7 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
-    <div>
+    <div class="category-in">
       <% bath_time_ary3 = @bath_time_ary2.index("#{member.id}")%>
       <% if bath_time_ary3.present? %>
       <%= "#{(bath_time_ary3 + 1)}番" %>
@@ -71,7 +71,7 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
-    <div>
+    <div class="category-in">
       <% bath_wait_ary3 = @bath_wait_ary2.index("#{member.id}")%>
       <% if bath_wait_ary3.present? %>
       <%= "#{(bath_wait_ary3 + 1)}番" %>
@@ -86,10 +86,10 @@
     <% end %>
   </td>
   <td style="border:1px solid #000000;text-align:left;">
-    <div>
+    <div class="category-in">
       <% escape_ary3 = @escape_ary2.index("#{member.id}")%>
       <% if escape_ary3.present? %>
-      <%= "#{(escape_ary3 + 1)}番" %>
+      <%= "待機中" %>
       <% end %>
     </div>
     <%= form_with model: [@tour, @category], class: 'form', local: true do |f| %>
