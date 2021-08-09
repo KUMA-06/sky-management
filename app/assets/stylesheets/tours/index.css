@@ -17,9 +17,8 @@
 .log{
   display: flex;
 }
-
-.add-tour{
-  border: solid 1px blue;
+.log-in,.lig-out,.sign-up,.add-tour{
+  margin: 0px 5px;
 }
 
 .tour-list{
