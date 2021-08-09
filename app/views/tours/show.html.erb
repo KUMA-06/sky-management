@@ -49,3 +49,20 @@
 <div class='reset'>
   リセット
 </div>
+
+<%= @json_data%>
+
+<script>
+  function diningAction() {
+    const dining = document.getElementById("dining");
+    const diningCount = document.getElementById("dining-count");
+    const diningList = gon.data["dining"];
+    diningCount.innerHTML = (diningList.length);
+    dining.addEventListener("click", () => {
+      diningList.push("あああああ");
+      diningCount.innerHTML = (diningList.length);
+      console.log(diningList);
+    });
+  }
+  window.addEventListener('turbolinks:load', diningAction);
+</script>
