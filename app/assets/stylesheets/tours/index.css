@@ -23,7 +23,13 @@
 
 .tour-list{
   display: flex;
-  margin: 5px 0px;
+  margin-top: 15px; 
+}
+
+.tour-place{
+  width: 60%;
+  text-align: center;
+  border:solid 5px lightgreen;
 }
 
 .del-tour{
