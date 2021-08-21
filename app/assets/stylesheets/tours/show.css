@@ -23,4 +23,15 @@
 
 .member-name{
   color: navy;
+  margin-left: 5%;
+}
+
+.member-derete{
+  float: right;
+  margin: 0 10%;
+  background-color: tomato;
+}
+
+.category-in{
+  text-align: center;
 }

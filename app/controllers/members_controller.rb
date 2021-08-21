@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
   before_action :authenticate_user!
   before_action :tuor_find
-  before_action :member_find, only[:edit, :update, :destroy]
+  before_action :member_find, only: [:edit, :update, :destroy]
 
   def new
     @member = Member.new
