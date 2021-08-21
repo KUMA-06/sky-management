@@ -24,3 +24,9 @@
 .member-name{
   color: navy;
 }
+
+.member-derete{
+  float: right;
+  margin: 0 10%;
+  background-color: tomato;
+}
