@@ -1,6 +1,7 @@
 class MembersController < ApplicationController
   before_action :authenticate_user!
   before_action :tuor_find
+  before_action :member_find, only[:edit, :update, :destroy]
 
   def new
     @member = Member.new
@@ -15,8 +16,19 @@ class MembersController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    if @member.update(member_params)
+      redirect_to tour_path(@tour)
+    else
+      render :edit
+    end
+  end
+
   def destroy
-    @member = Member.find(params[:id])
     @member.destroy
     redirect_to tour_path(@tour)
   end
@@ -29,5 +41,9 @@ class MembersController < ApplicationController
 
   def tuor_find
     @tour = Tour.find(params[:tour_id])
+  end
+
+  def member_find
+    @member = Member.find(params[:id])
   end
 end

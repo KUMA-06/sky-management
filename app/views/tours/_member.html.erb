@@ -4,7 +4,7 @@
       <%= member.group%>班
     </div>
     <div class="bold">
-      <%= member.nickname%>
+      <%= link_to member.nickname, edit_tour_member_path(@tour,member), method: :get, class: "member-name"%>
     </div>
     <div>
       <%= link_to "班削除", tour_member_path(@tour,member), method: :delete %>
