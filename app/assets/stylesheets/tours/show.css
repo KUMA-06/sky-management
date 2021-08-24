@@ -13,12 +13,34 @@
   margin: 0px 5px;
 }
 
+table{
+  width: 98%;
+  border-collapse: collapse;
+}
+
+
+tr, td{
+  border:1px solid black;
+  text-align:left;
+}
+
+.none{
+  border: none;
+}
+
+.add-group {
+  padding: 1%;
+  font-weight: bold;
+  text-align: center;
+}
+
 .bold{
   font-weight: bold;
 }
 
 .category-in{
   background-color: lightgreen;
+  text-align: center;
 }
 
 .member-name{
@@ -32,6 +54,6 @@
   background-color: tomato;
 }
 
-.category-in{
+.table-center{
   text-align: center;
 }

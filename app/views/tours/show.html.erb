@@ -18,7 +18,7 @@
 </div>
 
 <div style="margin-top:10px;padding:0px;" align="center">
-  <table width="98%" style="border-collapse: collapse;border:1px solid #000000;text-align:left;">
+  <table>
     <tbody>
       <tr>
         <th width="12%" style="border:1px solid #000000;text-align:center;"></th>
@@ -30,7 +30,9 @@
         <th width="12%" style="border:1px solid #000000;text-align:center;">部屋待機</th>
       </tr>
       <%= render partial: 'member', collection: @members %>
-      <td class="bold"><%= link_to "班追加", new_tour_member_path(@tour) %></td>
+      <tr class="none" >
+        <td class="add-group"><%= link_to "班追加", new_tour_member_path(@tour) %></td>
+      </tr>
     </tbody>
   </table>
 </div>
