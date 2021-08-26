@@ -1,5 +1,11 @@
-<%= form_with(model: [@tour,@member], local: true) do |f| %>
-<%= f.text_field :group, placeholder: "班" %>
-<%= f.text_field :nickname, placeholder: "アドベンチャーネーム" %>
-<%= f.submit "決定" %>
+<%= form_with(model: [@tour,@member], class: "form-w", local: true) do |f| %>
+<div>
+  <%= f.text_field :group, placeholder: "班" %>
+</div>
+<div>
+  <%= f.text_field :nickname, placeholder: "アドベンチャーネーム" %>
+</div>
+<div>
+  <%= f.submit "決定" %>
+</div>
 <% end %>
