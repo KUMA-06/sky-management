@@ -24,6 +24,14 @@ Eメール：aaa@aaa1
 マグネットで管理していたため、待機の班が増えてくると誰が何番目か分からなくなってしまうことがあり、班長さんから指摘されるなど問題も発生していました。
 なのでこのアプリでは、一目で何番目かわかる表示と、１番が抜けたら２番が繰り上がるようにしています。
 
+# 機能紹介
+## 班を追加するとテーブルが追加される。
+[![Image from Gyazo](https://i.gyazo.com/4a75bb0762934cf57a0fb7ccdfaee4b2.png)](https://gyazo.com/4a75bb0762934cf57a0fb7ccdfaee4b2)
+[![Image from Gyazo](https://i.gyazo.com/9ada3301650f474ecc34651b39762bc4.png)](https://gyazo.com/9ada3301650f474ecc34651b39762bc4)
+
+## 追加ボタンを押すと、その班が現在何番目なのかが表示される。
+[![Image from Gyazo](https://i.gyazo.com/1d3fc12c523d1fee2521b45507ec4b93.gif)](https://gyazo.com/1d3fc12c523d1fee2521b45507ec4b93)
+
 # 使用技術(開発環境)
 ## バックエンド
 Ruby, Ruby on rails
