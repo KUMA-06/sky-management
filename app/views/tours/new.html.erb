@@ -1,4 +1,4 @@
-<%= form_with(model: @tour, local: true) do |f| %>
+<%= form_with(model: @tour, class: "form-w", local: true) do |f| %>
 <%= f.text_field :place, placeholder: "ツアー名" %>
 <%= f.submit "決定" %>
 <% end %>

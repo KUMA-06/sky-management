@@ -17,7 +17,7 @@
 .log{
   display: flex;
 }
-.log-in,.lig-out,.sign-up,.add-tour{
+.log-in,.lig-out,.sign-up{
   margin: 0px 5px;
 }
 
@@ -26,12 +26,17 @@
   margin-top: 15px; 
 }
 
-.tour-place{
+.tour-place, .add-tour{
   width: 60%;
   text-align: center;
   border:solid 5px lightgreen;
+  margin: 0% 1% 1% 1%;
 }
 
 .del-tour{
   background-color: tomato;
+}
+
+.add-tour{
+  width: 30%;
 }
