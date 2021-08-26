@@ -11,13 +11,12 @@
 .top-page{
   width: 60%;
   margin: 0 auto;
-  border: solid 1px blue;
 }
 
 .log{
   display: flex;
 }
-.log-in,.lig-out,.sign-up{
+.log-in,.log-out,.sign-up{
   margin: 0px 5px;
 }
 
